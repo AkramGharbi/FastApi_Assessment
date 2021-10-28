@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+    selenium:
+        image: selenium/standalone-firefox
+        ports:
+        - 4444:4444
+    api:
+        build: ./app
+        ports: 
+            - 80:80
+        environment:
+            - DB_URL=mongodb://db/myTestDB
+        volumes:
+            - ./app:/app
+    db:
+        image: mongo
+        ports:
+            - 27017:27017
+        volumes:
+            - taskdb:/data/db
+volumes:
+    taskdb:
