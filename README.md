@@ -16,8 +16,8 @@ The tools used to achieve that goal are :
 - "Url" : url of the page to scrape. `PS: Url should be in that form `
 - ```{page_url}/posts``` 
 
-## the mongoDB services 
+## The mongoDB services 
 
 You could use those services to select the data of a specific facebook page 
-or to look for all of the data. Two collections are created, one for posts an the other for 
+or to look for all of the data. Two collections are created, one for posts and the other for 
 comments.
